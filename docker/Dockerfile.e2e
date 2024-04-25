@@ -1,0 +1,14 @@
+FROM node:18-alpine
+
+WORKDIR /opt/api
+
+COPY package*.json ./
+
+RUN yarn install
+
+COPY . .
+
+RUN yarn prisma generate
+
+CMD ["yarn", "run", "test:e2e"]
+

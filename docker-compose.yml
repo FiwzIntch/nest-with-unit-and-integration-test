@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  api:
+    image: 'registry.gitlab.com/thapanee1/nest-test-env/service:main'
+    env_file:
+      - .env.docker
+    ports:
+      - 3000:3000

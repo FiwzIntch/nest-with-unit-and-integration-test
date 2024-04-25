@@ -1,0 +1,23 @@
+meta {
+  name: Delete
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/post/4
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+    "title": "xx",
+    "content": "xxxx",
+    "published": true
+  }
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Get all
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/post?pageSize=2&joins[]=user
+  body: none
+  auth: bearer
+}
+
+query {
+  pageSize: 2
+  joins[]: user
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}

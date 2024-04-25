@@ -1,0 +1,8 @@
+.dockerignore
+node_modules
+Bruno
+coverage
+dist
+# Yarn 3 files
+.yarn/cache
+.yarn/install-state.gz

@@ -1,0 +1,23 @@
+meta {
+  name: Update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/comment/4
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+    "title": "xx",
+    "content": "xxxx",
+    "published": true
+  }
+}

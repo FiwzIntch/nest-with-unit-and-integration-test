@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Nest Vitest",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

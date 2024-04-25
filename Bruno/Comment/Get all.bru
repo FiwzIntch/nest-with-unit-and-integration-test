@@ -1,0 +1,21 @@
+meta {
+  name: Get all
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/comment?pageSize=2&joins[]=post&joins[]=user
+  body: none
+  auth: bearer
+}
+
+query {
+  pageSize: 2
+  joins[]: post
+  joins[]: user
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/auth/login
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "email": "admin@test.com",
+    "password": "111111"
+  }
+}
+
+script:post-response {
+  const body = res.getBody()
+  
+  if (body.accessToken) {
+    bru.setEnvVar('accessToken',body.accessToken)
+  } else {
+     bru.setEnvVar('accessToken',"")
+  }
+}
